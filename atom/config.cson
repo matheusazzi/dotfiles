@@ -1,0 +1,22 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "8a551288-c8ec-4502-ab2e-ba06face7372"
+  core:
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "dracula-syntax"
+    ]
+  editor:
+    fontFamily: "OperatorMono-Light, Menlo, Consolas, DejaVu Sans Mono, monospace"
+    fontSize: 20
+    invisibles: {}
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "e52fd2a0-9cda-4805-bee5-1830f84f9334"
+  "linter-ui-default":
+    panelHeight: 300
+  welcome:
+    showOnStartup: false

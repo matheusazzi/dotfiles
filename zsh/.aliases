@@ -1,0 +1,41 @@
+#!/bin/bash
+
+alias desktop="cd $DESKTOP"
+alias downloads="cd $DOWNLOADS"
+alias workspace="cd $WORKSPACE"
+
+# Call MacOS Software Update
+alias macupdate='sudo softwareupdate -i -a'
+
+# Start a server on port 5000
+alias simple_server='ruby -run -e httpd -- -p 5000'
+
+# Change zshrc config
+alias zshconfig="vim ~/.zshrc"
+alias reload!='. ~/.zshrc'
+
+# Pretty print the path
+alias path='echo $PATH | tr -s ":" "\n"'
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
+alias gs="git status"
+alias gl="git log --pretty=oneline --abbrev-commit"
+alias ga="git add"
+alias gp="git push"
+alias gc="git commit"
+alias gall="git add --all ."
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias grs="git reset"
+alias grb="git rebase"
+alias gpo="git push origin"
+alias gpl="git pull"
+alias gplo="git pull origin"
+
+alias b="bundle"
+alias bx="bundle exec"
+
+alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+alias watchos="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator\ \(Watch\).app"
