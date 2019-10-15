@@ -5,10 +5,10 @@ alias downloads="cd $DOWNLOADS"
 alias workspace="cd $WORKSPACE"
 
 # Call MacOS Software Update
-alias macupdate='sudo softwareupdate -i -a'
+alias macupdate='sudo softwareupdate -i -r'
 
 # Start a server on port 5000
-alias simple_server='ruby -run -e httpd -- -p 5000'
+alias server='ruby -run -e httpd -- -p 5000'
 
 # Change zshrc config
 alias zshconfig="vim ~/.zshrc"
@@ -36,6 +36,9 @@ alias gplo="git pull origin"
 
 alias b="bundle"
 alias bx="bundle exec"
+
+alias vim="nvim"
+alias v="nvim"
 
 alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias watchos="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator\ \(Watch\).app"
