@@ -21,6 +21,6 @@ tmux
 tree
 unixodbc
 unzip
-vim --override-system-vi
+neovim
 yarn --ignore-dependencies
 z

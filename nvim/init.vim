@@ -1,45 +1,31 @@
-filetype off                  " required
+filetype off " required
 
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
-" The mapleader has to be set before vundle starts loading all
-" the plugins.
-let mapleader=","
+" The mapleader has to be set before loading the plugins.
+let mapleader=','
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=/usr/local/opt/fzf
+call plug#begin()
+Plug 'dracula/vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'itchyny/lightline.vim'
+Plug 'chrisbra/Colorizer.git'
 
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'dracula/vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'chrisbra/color_highlight.git'
-
-Plugin 'jistr/vim-nerdtree-tabs.git'
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'kien/ctrlp.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-session'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-surround'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'junegunn/fzf.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'bogado/file-line'
-Plugin 'prettier/vim-prettier'
-Plugin 'tpope/vim-fugitive'
-
-Plugin 'sheerun/vim-polyglot'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'airblade/vim-gitgutter'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+Plug 'scrooloose/nerdtree.git', { 'on': 'NERDTreeToggle' }
+Plug 'jistr/vim-nerdtree-tabs.git', { 'on': 'NERDTreeToggle' }
+Plug 'kien/ctrlp.vim'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-session'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
+Plug 'bogado/file-line'
+Plug 'prettier/vim-prettier'
+Plug 'tpope/vim-fugitive'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
+call plug#end()
 
 " ================ General Config ====================
 
@@ -49,13 +35,14 @@ set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=500                 "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
-"set showmode                    "Show current mode down the bottom
+"set showmode                   "Show current mode down the bottom
 set noshowmode                  "Use lightline
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set t_vb=                       "Disable screen flash
 set autoread                    "Reload files changed outside vim
 set laststatus=2
+set mouse=a                     "Allow mouse
 
 set guioptions=                 "Hide right scrollbar
 
@@ -93,7 +80,7 @@ filetype indent on
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-"set nowrap       "Don't wrap lines
+"set nowrap      "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
 " ================ Folds ============================
@@ -114,6 +101,7 @@ set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+set inccomand=split
 
 let g:ackprg = 'ag --nogroup --nocolor --column'
 set colorcolumn=80    "Have a line after 80 char
@@ -127,15 +115,16 @@ nnoremap <Down>  :echoe "Use j"<CR>
 nnoremap j gj
 nnoremap k gk
 
-"map <silent> <C-\>b :NERDTreeToggle<CR>
-map <silent> ,l :NERDTreeToggle<CR>
+nnoremap <C-\> :NERDTreeToggle<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <C-f> :Ag<CR>
 
 let g:dracula_colorterm = 0
 let g:dracula_italic = 0
 
 colorscheme dracula
 set guifont=OperatorMono-Book:h19
-set ruler             " Add ruler at the bottom of vim
+set ruler               " Add ruler at the bottom of vim
 
 if has('gui_running')
   set macligatures      " ligatures (only for MacVIM)
