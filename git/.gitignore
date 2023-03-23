@@ -1,6 +1,9 @@
 # Compiled Python files
 *.pyc
 
+# Sass compiled files
+.sass-cache
+
 # Folder view configuration files
 .DS_Store
 Desktop.ini
@@ -20,5 +23,3 @@ log/*.log
 # Package manager files
 .bundle
 node_modules
-
-.sass-cache

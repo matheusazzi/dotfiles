@@ -20,10 +20,6 @@ defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
-# Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
-# defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
 # Disable window animations and Get Info animations in Finder
 defaults write com.apple.finder DisableAllAnimations -bool true
 

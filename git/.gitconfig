@@ -1,23 +1,30 @@
 [user]
   name = Matheus Azzi
   email = matheuslazzi@gmail.com
+
+[core]
+  editor = hx
+  excludesfile = ~/.gitignore
+
 [color "branch"]
   current = yellow reverse
   local = yellow
   remote = green
+
 [color "diff"]
   meta = yellow bold
   frag = magenta bold
   old = red bold
   new = green bold
+
 [color "status"]
   added = yellow
   changed = green
   untracked = cyan
+
 [merge]
   log = true
-[core]
-  editor = vim
+
 [alias]
   a = add
   p = push
@@ -30,8 +37,10 @@
   pl = pull
   plo = pull origin
   br = branch
+
 [credential]
   helper = osxkeychain
+
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f

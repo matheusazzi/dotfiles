@@ -1,26 +1,12 @@
 autoconf
 automake
-awscli
 coreutils
-curl
-fzf
-git
-gmp
-grep
-heroku
-imagemagick --with-webp
-libtool
-libxslt
-libyaml
 moreutils
+curl
+git
+grep
 openssh
 openssl
 readline
-the_silver_searcher
-tmux
 tree
-unixodbc
-unzip
-neovim
-yarn --ignore-dependencies
-z
+helix
