@@ -48,11 +48,20 @@ defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
+# Finder: show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # Hide desktop icons
 defaults write com.apple.finder CreateDesktop false
+
+# Take screenshots as jpg (usually smaller size) and not png
+defaults write com.apple.screencapture type jpg
+
+# Don't open previous previewed files (e.g. PDFs) on Preview app when opening a new one
+defaults write com.apple.Preview ApplePersistenceIgnoreState YES
 
 # Show the ~/Library folder
 chflags nohidden ~/Library
