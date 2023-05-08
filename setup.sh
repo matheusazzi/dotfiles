@@ -39,12 +39,13 @@ then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-# Update Homebrew.
+# Update Homebrew
 brew update
 
-# Upgrade any already-installed formulae.
+# Upgrade any already-installed formulae
 brew upgrade
 
+# Install ASDF, latest Ruby & Node.js
 echo "→ Installing ASDF, Node.js & Ruby..."
 brew install asdf
 
@@ -60,13 +61,22 @@ asdf global ruby latest
 echo "→ Installing packages and tools..."
 brew install $(cat brew/tools)
 
+# Install Postgres & Redis through ASDF
+echo "→ Installing Postgres & Redis..."
+asdf plugin-add https://github.com/smashedtoatoms/asdf-postgres.git
+asdf install postgres latest
+asdf global postgres latest
+
+asdf plugin-add https://github.com/smashedtoatoms/asdf-redis.git
+asdf install redis latest
+asdf global redis latest
+
 echo "→ Sourcing .zshrc and .macos..."
 source ~/.zshrc
 source ~/.macos
 
 # Install apps
 echo "→ Installing apps..."
-brew install $(cat brew/services)
 brew cask install $(cat brew/apps)
 
 # Remove outdated versions from the cellar

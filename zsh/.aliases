@@ -36,6 +36,7 @@ alias watchos="open /Applications/Xcode.app/Contents/Developer/Applications/Simu
 alias g="git"
 alias ga="git add"
 alias gaa="git add --all ."
+alias gall="git add --all ."
 alias gb="git branch"
 alias gc="git commit --verbose"
 alias gcm="git commit -m"
@@ -54,6 +55,10 @@ alias gs="git status"
 alias b="bundle"
 alias bx="bundle exec"
 
+# Postgres aliases
+alias postgres-start="$(asdf where postgres)/bin/pg_ctl -D $(asdf where postgres)/data start"
+alias postgres-stop="$(asdf where postgres)/bin/pg_ctl -D $(asdf where postgres)/data stop"
+
 # Map vim to helix-editor
 alias vim="hx"
 alias v="hx"
@@ -67,6 +72,7 @@ alias dp="docker pull"
 
 alias dc="docker-compose"
 alias dcr="docker-compose run"
+alias dcrm="docker-compose run --rm"
 alias dcst="docker-compose start"
 alias dcsp="docker-compose stop"
 alias dcu="docker-compose up"

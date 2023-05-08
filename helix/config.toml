@@ -1,1 +1,12 @@
 theme = "dracula"
+
+[editor]
+scrolloff = 8
+line-number = "relative"
+color-modes = true
+rulers = [90]
+text-width = 80
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
