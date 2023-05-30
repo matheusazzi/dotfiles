@@ -63,7 +63,7 @@ brew install $(cat brew/tools)
 
 # Install Postgres & Redis through ASDF
 echo "→ Installing Postgres & Redis..."
-asdf plugin-add https://github.com/smashedtoatoms/asdf-postgres.git
+asdf plugin-add postgres https://github.com/smashedtoatoms/asdf-postgres.git
 asdf install postgres latest
 asdf global postgres latest
 
@@ -77,7 +77,8 @@ source ~/.macos
 
 # Install apps
 echo "→ Installing apps..."
-brew cask install $(cat brew/apps)
+brew tap homebrew/cask-fonts
+brew install --cask $(cat brew/apps)
 
 # Remove outdated versions from the cellar
 brew cleanup

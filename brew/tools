@@ -12,6 +12,5 @@ openssl
 ossp-uuid
 readline
 tree
-uuid
 zlib
 zoxide
