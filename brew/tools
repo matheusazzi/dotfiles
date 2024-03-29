@@ -12,5 +12,6 @@ openssl
 ossp-uuid
 readline
 tree
+watchman
 zlib
 zoxide

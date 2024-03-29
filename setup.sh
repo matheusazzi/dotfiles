@@ -22,8 +22,12 @@ cp asdf/.asdfrc ~/.asdfrc
 
 cp helix/config.toml ~/.config/helix/config.toml
 
-cp ruby/.defult-gems ~/.defult-gems
+cp ruby/.default-gems ~/.default-gems
 cp ruby/.gemrc ~/.gemrc
+cp ruby/.irbrc ~/.irbrc
+cp ruby/.pryrc ~/.pryrc
+
+cp node/.npmrc ~/.npmrc
 
 cp zsh/.exports ~/zsh/.exports
 cp zsh/.aliases ~/zsh/.aliases

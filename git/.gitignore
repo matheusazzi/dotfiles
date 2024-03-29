@@ -18,8 +18,13 @@ Thumbs.db
 .Trashes
 
 # Log files
-log/*.log
+log
+*.log
 
 # Package manager files
 .bundle
 node_modules
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
